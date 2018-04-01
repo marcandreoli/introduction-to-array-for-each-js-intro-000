@@ -1,14 +1,16 @@
 // Add your doToElementsInArray() function here:
-var evens = [1,2,3,4,5,6,7]
-
-evens.forEach(n => {
-  console.log(`${n} is great`)
-});
-
-
-evens.forEach((even, index, array) => {
-  debugger;
-  console.log(`${even} is not odd!`);
-});
+function doToElementsInArray(array, callback) {
+  array.forEach(callback);
+}
 
 // Add your changeCompletely() function here:
+function changeCompletely(element, index, array) {
+  array[index] = Math.floor(Math.random() * 100 + 2).toString() + ` ${array[index]}s!!!`;
+}
+
+var animals = ["dog", "cat", "squirrel"];
+
+doToElementsInArray(animals, changeCompletely);
+
+// log out animals -- pretty cool, right?
+console.log(animals);
