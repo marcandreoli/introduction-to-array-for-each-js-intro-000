@@ -5,4 +5,10 @@ evens.forEach(n => {
   console.log(`${n} is great`)
 });
 
+
+evens.forEach((even, index, array) => {
+  debugger;
+  console.log(`${even} is not odd!`);
+});
+
 // Add your changeCompletely() function here:
